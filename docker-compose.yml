@@ -1,0 +1,30 @@
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      PUBLIC_URL: http://localhost:3000
+    depends_on:
+      - directus
+
+  directus:
+    image: directus/directus:11.0.2
+    ports:
+      - "8055:8055"
+    volumes:
+      - ./database:/directus/database
+      - ./uploads:/directus/uploads
+      - ./extensions:/directus/extensions
+    environment:
+      SECRET: "TfgDv43c2cyVu1Yo8LQkP3JBkGE2gXJS0DmAbu4iN+8="
+      ADMIN_EMAIL: "tvtugova1511@gmail.com"
+      ADMIN_PASSWORD: "t35tpa55"
+      PUBLIC_URL: "http://localhost:8055"
+      DB_CLIENT: "sqlite3"
+      DB_FILENAME: "/directus/database/data.db"
+      WEBSOCKETS_ENABLED: "true"
+    expose:
+      - "8055"
