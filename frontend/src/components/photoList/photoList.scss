@@ -1,0 +1,22 @@
+.photo-list {
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    column-gap: 25px;
+    row-gap: 30px;
+    background-color: #e0eeff;
+    border-radius: 12px;       
+    justify-content: center;   
+}
+  
+.photo-list img {
+    width: 400px;         
+    height: auto;
+    border-radius: 8px; 
+    border: 10px solid white;       
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+}

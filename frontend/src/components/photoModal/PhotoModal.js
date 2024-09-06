@@ -1,1 +1,7 @@
-// Компонент модального окна для просмотра фотографии в полном размере при клике на миниатюру
+import './photoModal.scss';
+
+const PhotoModal = () => {
+
+};
+
+export default PhotoModal;
