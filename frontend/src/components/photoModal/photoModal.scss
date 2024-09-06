@@ -1,4 +1,7 @@
 .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,24 +10,24 @@
     background: rgba(0, 0, 0, 0.8);
     z-index: 2;
     &__content {
-        position: absolute;              
-        top: 50%;                       
-        left: 50%;                       
-        transform: translate(-50%, -50%);
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
     }
     &__image {
-        width: 90%;
-        height: auto;
+        max-width: 90vw; 
+        max-height: 90vh; 
         border-radius: 8px;
         border: solid white; 
         border-width: 10px 12px 50px;
     }
     &__close {
         position: absolute;
-        top: 700px;
-        right: 100px;
-        font-size: 40px;
+        bottom: 1vh;
+        right: 1vw;
+        font-size: 200%;
         color: rgb(56, 52, 142);
         cursor: pointer;
     }
 }
+  

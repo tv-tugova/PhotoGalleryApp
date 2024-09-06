@@ -1,7 +1,7 @@
 .photo {
     &__grid {
         display: grid;
-        grid-template-columns: repeat(3, 450px);
+        grid-template-columns: repeat(3, 350px);
         column-gap: 25px;
         row-gap: 30px;
         background-color: #e0eeff;
@@ -9,8 +9,8 @@
         justify-content: center; 
     }  
     &__image {
-        width: 400px;         
-        height: auto;
+        width: 350px;         
+        height: 235px;
         border-radius: 8px; 
         border: 10px solid white;       
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 

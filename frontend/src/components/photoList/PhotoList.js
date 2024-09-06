@@ -35,6 +35,8 @@ const PhotoList = () => {
         />
     ) : null;
 
+    const imgStyle = {'objectFit' : 'cover'};
+
     return (
         <div className="photo__grid">
             {photos.map((photo) => (
@@ -43,6 +45,7 @@ const PhotoList = () => {
                     key={photo.id} 
                     src={`${directus.apiBase}/assets/${photo.Image}.jpg`} 
                     alt='фото'
+                    style={imgStyle}
                     onClick={() => openModal(photo)}
                 />
             ))}
