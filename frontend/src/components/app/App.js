@@ -4,7 +4,9 @@ import PhotoList from '../photoList/PhotoList';
 const App = () => {
   return (
     <div className="app">
-      <PhotoList/>
+        <main>
+            <PhotoList/>
+        </main>
     </div>
   )
 }

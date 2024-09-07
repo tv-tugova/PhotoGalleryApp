@@ -1,30 +1,21 @@
+import { useHttp } from "../hooks/http.hook";
 
-class Directus {
+const useDirectus = () => {
+    const {loading, request} = useHttp();
+  
+    const apiBase = 'http://localhost:8055';
+    const baseOffset = 0;
 
-  apiBase = 'http://localhost:8055';
-  apiToken = '-bigYuGfJdYDoBmgBO7RLC5ikc8A1-wB';
+    const getAllPhotos = async (offset = baseOffset) => {
+        const res = await request(`${apiBase}/items/photos?limit=9&offset=${offset}`);
+        return res.data;
+    };
 
-  getResourse = async (url) => {
-    let response = await fetch(url, {
-      headers: {
-          Authorization: `Bearer ${this.apiToken}`,
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Could not fetch ${url}, status: ${response.status}`);
+    const getPhoto = (id) => {
+        return request(`${apiBase}/items/photos/${id}`)
     }
 
-    return await response.json();
-  };
+    return {loading, getAllPhotos, getPhoto};
+};
 
-  getAllPhotos = () => {
-    return this.getResourse(`${this.apiBase}/items/photos?limit=9&offset=0`);
-  };
-
-  getPhoto = (id) => {
-    return this.getResourse(`${this.apiBase}/items/photos/${id}`)
-  }
-}
-
-export default Directus;
+export default useDirectus;

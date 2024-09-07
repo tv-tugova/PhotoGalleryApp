@@ -1,0 +1,19 @@
+.button {
+    display: block;
+    margin: 45px auto 0;
+    padding: 10px 20px;
+    background-color: rgb(56, 52, 142); 
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    &:hover { 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+}

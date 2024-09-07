@@ -16,7 +16,7 @@
     }
     &__image {
         max-width: 90vw; 
-        max-height: 90vh; 
+        height: 90vh; 
         border-radius: 8px;
         border: solid white; 
         border-width: 10px 12px 50px;
@@ -24,8 +24,7 @@
     &__close {
         position: absolute;
         bottom: 1vh;
-        right: 1vw;
-        font-size: 200%;
+        right: 0.5vw;
         color: rgb(56, 52, 142);
         cursor: pointer;
     }
