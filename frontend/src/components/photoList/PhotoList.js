@@ -4,7 +4,7 @@ import { observer } from 'mobx-react-lite';
 import photoStore from '../../stores/PhotoStore';
 
 import PhotoModal from '../photoModal/PhotoModal';
-import useDirectus from '../../services/Directus';
+import useDirectus from '../../services/directus';
 
 import './photoList.scss';
 
